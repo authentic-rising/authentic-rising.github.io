@@ -1,4 +1,4 @@
-: root {
+:root {
   --cream: #f7f4ef;
   --ink: #2b2728;
   --plum: #8a6f91;
@@ -35,7 +35,7 @@ a,button {
   -webkit-tap-highlight-color: transparent
 }
 
-a: focus-visible,button: focus-visible {
+a:focus-visible,button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 6px
 }
@@ -106,7 +106,7 @@ em {
   padding: 12px
 }
 
-.skip-link: focus {
+.skip-link:focus {
   transform: none
 }
 
@@ -151,7 +151,7 @@ em {
   text-decoration: none
 }
 
-.site-header nav a: hover {
+.site-header nav a:hover {
   color: #65506a
 }
 
@@ -179,7 +179,7 @@ em {
   align-self: center
 }
 
-.hero-copy>p: not(.eyebrow) {
+.hero-copy>p:not(.eyebrow) {
   max-width: 530px;
   font-size: 14px
 }
@@ -229,7 +229,7 @@ em {
   transition: background .2s
 }
 
-.button: hover {
+.button:hover {
   background: #514352
 }
 
@@ -273,7 +273,7 @@ em {
   color: #c9b5cf
 }
 
-.philosophy p: not(.eyebrow) {
+.philosophy p:not(.eyebrow) {
   font-size: 15px
 }
 
@@ -288,7 +288,7 @@ em {
   margin-bottom: 60px
 }
 
-.section-intro>p: last-child {
+.section-intro>p:last-child {
   max-width: 680px
 }
 
@@ -302,12 +302,12 @@ em {
   border-left: 1px solid var(--line)
 }
 
-.pillars article: first-child {
+.pillars article:first-child {
   padding-left: 0;
   border: 0
 }
 
-.pillars article: last-child {
+.pillars article:last-child {
   padding-right: 0
 }
 
@@ -328,7 +328,7 @@ em {
   min-height: 26px
 }
 
-.pillars article>p: last-child {
+.pillars article>p:last-child {
   font-size: 13px;
   line-height: 1.9
 }
@@ -352,7 +352,7 @@ em {
   background: rgba(138,111,145,.075)
 }
 
-.wonder .split>div: last-child>p: not(.eyebrow) {
+.wonder .split>div:last-child>p:not(.eyebrow) {
   font-size: 14px
 }
 
@@ -419,7 +419,7 @@ em {
   gap: 90px
 }
 
-.parents>div: last-child {
+.parents>div:last-child {
   font-size: 15px
 }
 
@@ -432,44 +432,25 @@ em {
   background: rgba(122,139,123,.12)
 }
 
-.about .split>div>p: not(.eyebrow) {
+.about .split>div>p:not(.eyebrow) {
   font-size: 14px
 }
 
-.portrait-placeholder {
-  min-height: 490px;
-  border: 1px solid rgba(122,139,123,.4);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px;
-  text-align: center;
-  background: radial-gradient(ellipse at 60% 30%,var(--cream),transparent 70%)
+.steph-portrait {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(122, 139, 123, .4);
+  align-self: start;
 }
 
-.portrait-placeholder: before {
-  content: '';
-  position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(122,139,123,.3);
-  border-radius: 50% 50% 0 0;
-  pointer-events: none
-}
-
-.portrait-placeholder>img {
-  margin-bottom: 36px
-}
-
-.portrait-placeholder p {
-  font: 30px/1.4 var(--serif)
-}
-
-.portrait-placeholder figcaption {
-  font-size: 11px;
-  margin-top: 20px;
-  position: relative
+.steph-portrait > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  /* Keep the top of the photo visible and crop away the bottom. */
+  object-position: center top;
 }
 
 .signature {
@@ -517,7 +498,7 @@ em {
   align-items: center
 }
 
-.service-list article: last-child {
+.service-list article:last-child {
   border-bottom: 1px solid var(--line)
 }
 
@@ -578,7 +559,7 @@ em {
   font-size: 28px
 }
 
-.product-copy p: not(.eyebrow) {
+.product-copy p:not(.eyebrow) {
   font-size: 14px
 }
 
@@ -682,7 +663,7 @@ em {
   color: var(--cream)
 }
 
-.manifesto>div>p: not(.eyebrow) {
+.manifesto>div>p:not(.eyebrow) {
   font-size: 17px
 }
 
@@ -702,7 +683,7 @@ em {
   gap: 110px
 }
 
-.contact>div>p: not(.eyebrow) {
+.contact>div>p:not(.eyebrow) {
   font-size: 14px
 }
 
@@ -713,7 +694,7 @@ em {
   align-self: center
 }
 
-.contact-notice>span: first-child {
+.contact-notice>span:first-child {
   font-size: 38px;
   color: var(--plum)
 }
@@ -771,7 +752,7 @@ em {
   margin: 10px 0 24px
 }
 
-.footer-grid>div>a: not(.wordmark) {
+.footer-grid>div>a:not(.wordmark) {
   display: block;
   font-size: 12px;
   margin: 8px 0;
@@ -904,7 +885,7 @@ em {
     font-size: 14px
   }
 
-  .menu-toggle: not([hidden]) {
+  .menu-toggle:not([hidden]) {
     display: block
   }
 
@@ -926,7 +907,7 @@ em {
     font-size: clamp(45px,8.5vw,66px)
   }
 
-  .hero-copy>p: not(.eyebrow) {
+  .hero-copy>p:not(.eyebrow) {
     max-width: 600px
   }
 
@@ -989,7 +970,7 @@ em {
     padding: 0 20px
   }
 
-  .pillars article: nth-child(3) {
+  .pillars article:nth-child(3) {
     padding-left: 0;
     border-left: 0
   }
@@ -1007,7 +988,7 @@ em {
     min-height: 38px
   }
 
-  .pillars article>p: last-child {
+  .pillars article>p:last-child {
     font-size: 12px
   }
 
@@ -1042,11 +1023,7 @@ em {
     bottom: 25px
   }
 
-  .portrait-placeholder {
-    min-height: 360px
-  }
-
-  .about .split>div {
+.about .split>div {
     order: -1
   }
 
@@ -1123,7 +1100,7 @@ em {
     flex-wrap: wrap
   }
 
-  .footer-bottom>span: nth-child(2) {
+  .footer-bottom>span:nth-child(2) {
     display: none
   }
 
@@ -1168,15 +1145,15 @@ em {
     gap: 24px 12px
   }
 
-  .footer-grid>div: first-child {
+  .footer-grid>div:first-child {
     grid-column: 1/-1
   }
 
-  .footer-grid>div: last-child {
+  .footer-grid>div:last-child {
     grid-column: 1/-1
   }
 
-  .footer-grid>div: last-child .footer-pending {
+  .footer-grid>div:last-child .footer-pending {
     display: inline-block;
     margin: 0 15px 8px 0
   }
@@ -1208,7 +1185,7 @@ em {
     scroll-behavior: auto
   }
 
-  *,*: : before,*: : after {
+  *,*: :before,*: :after {
     animation: none!important;
     transition: none!important
   }
