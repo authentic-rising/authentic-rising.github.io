@@ -443,6 +443,27 @@
             
           </p>
           <a class="button" href="https://calendar.app.google/ogfMT9sHYbNbyrfA8">Book a discovery call ↗</a>
+          <form class="enquiry-form" id="enquiry-form">
+            <h3>Send an enquiry</h3>
+            <p id="enquiry-guidance">Please keep your message brief and avoid sensitive or medical details about children. Your enquiry will be emailed to Steph and will not sign you up for marketing.</p>
+            <label for="enquiry-name">Your name</label>
+            <input id="enquiry-name" name="name" autocomplete="name" maxlength="100" required>
+            <label for="enquiry-email">Email address</label>
+            <input id="enquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            <label for="enquiry-type">What would you like to discuss?</label>
+            <select id="enquiry-type" name="type" required>
+              <option value="">Please choose</option>
+              <option value="child-sessions">Children's sessions</option>
+              <option value="parent-support">Parent support</option>
+              <option value="speaking">Speaking or workshops</option>
+              <option value="other">Something else</option>
+            </select>
+            <label for="enquiry-message">Brief message</label>
+            <textarea id="enquiry-message" name="message" rows="5" maxlength="4000" aria-describedby="enquiry-guidance" required></textarea>
+            <button class="button" type="submit" disabled>Send enquiry ↗</button>
+            <p id="enquiry-status" role="status" aria-live="polite"></p>
+            <noscript><p>Please enable JavaScript to use this form, or email steph@authentickids.co.uk.</p></noscript>
+          </form>
         </div>
 
     </main>
