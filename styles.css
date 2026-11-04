@@ -1203,3 +1203,8 @@ em {
 .enquiry-form .button { margin-top: 1.25rem; cursor: pointer; }
 .enquiry-form .button:disabled { opacity: .65; cursor: wait; }
 .enquiry-form #enquiry-status { margin-top: 1rem; }
+.newsletter-section { max-width: 760px; }
+.enquiry-form .newsletter-consent { display: flex; gap: .8rem; align-items: flex-start; }
+.enquiry-form .newsletter-consent input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin-top: .35rem; padding: 0; }
+.newsletter-optional[hidden] { display: none !important; }
+.newsletter-section details { margin-top: 1.5rem; }

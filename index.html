@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="newsletter/signup.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -443,9 +444,10 @@
             
           </p>
           <a class="button" href="https://calendar.app.google/ogfMT9sHYbNbyrfA8">Book a discovery call ↗</a>
+          <p><a href="newsletter/subscribe/?source=booking">You can also subscribe to Steph's letters</a>, separately from your booking.</p>
           <form class="enquiry-form" id="enquiry-form">
             <h3>Send an enquiry</h3>
-            <p id="enquiry-guidance">Please keep your message brief and avoid sensitive or medical details about children. Your enquiry will be emailed to Steph and will not sign you up for marketing.</p>
+            <p id="enquiry-guidance">Please keep your message brief and avoid sensitive or medical details about children. Your enquiry will be emailed to Steph. Newsletter signup is optional and separate.</p>
             <label for="enquiry-name">Your name</label>
             <input id="enquiry-name" name="name" autocomplete="name" maxlength="100" required>
             <label for="enquiry-email">Email address</label>
@@ -460,12 +462,27 @@
             </select>
             <label for="enquiry-message">Brief message</label>
             <textarea id="enquiry-message" name="message" rows="5" maxlength="4000" aria-describedby="enquiry-guidance" required></textarea>
+            <label class="newsletter-optional newsletter-consent" hidden><input type="checkbox" name="newsletterConsent" disabled> <span data-newsletter-consent></span></label>
             <button class="button" type="submit" disabled>Send enquiry ↗</button>
             <p id="enquiry-status" role="status" aria-live="polite"></p>
             <noscript><p>Please enable JavaScript to use this form, or email steph@authentickids.co.uk.</p></noscript>
           </form>
         </div>
 
+      <section class="section wrap newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Letters from Steph</h2>
+        <p>Thoughts on children's wellbeing, self-trust and connection, delivered by email.</p>
+        <form class="enquiry-form newsletter-signup" data-source="website">
+          <label for="newsletter-name">Your name (optional)</label><input id="newsletter-name" name="name" autocomplete="given-name" maxlength="100">
+          <label for="newsletter-email">Email address</label><input id="newsletter-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <label class="newsletter-consent"><input type="checkbox" name="consent" required disabled> <span data-newsletter-consent>Newsletter signup is being prepared.</span></label>
+          <p><a href="#newsletter-privacy">How we use your information</a></p>
+          <button class="button" type="submit" disabled>Subscribe ↗</button>
+          <p role="status" aria-live="polite">Checking newsletter signup availability…</p>
+          <noscript><p>Please enable JavaScript to subscribe.</p></noscript>
+        </form>
+        <details id="newsletter-privacy"><summary>How we use your information</summary><p>We use your email address and optional name to send the Authentic Kids letters you request. You must confirm your email before receiving them, and you can unsubscribe using any letter. Please do not include information about children. A minimal do-not-contact record may be retained after a profile is removed. For questions, email steph@authentickids.co.uk.</p></details>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="wrap footer-grid">

@@ -40,7 +40,11 @@ if (enquiryForm) {
   enquiryForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (submit.disabled || !enquiryForm.reportValidity()) return;
-    const payload = JSON.stringify(Object.fromEntries(new FormData(enquiryForm)));
+    const values = Object.fromEntries(new FormData(enquiryForm));
+    const consent = enquiryForm.querySelector('[name="newsletterConsent"]');
+    values.newsletterConsent = Boolean(consent && !consent.disabled && consent.checked);
+    values.newsletterConsentVersion = values.newsletterConsent ? consent.dataset.consentVersion : null;
+    const payload = JSON.stringify(values);
     if (payload !== previousPayload) {
       requestId = crypto.randomUUID();
       previousPayload = payload;
@@ -55,10 +59,13 @@ if (enquiryForm) {
         signal: AbortSignal.timeout(20000)
       });
       if (!response.ok) throw new Error('Submission failed');
+      const result = await response.json();
       enquiryForm.reset();
       requestId = null;
       previousPayload = null;
       status.textContent = 'Thank you. Your enquiry has been received for delivery to Steph.';
+      if (result.newsletterStatus === 'confirmation-requested') status.textContent += ' Please check your email to confirm your newsletter signup.';
+      if (result.newsletterStatus === 'unavailable') status.textContent += ' Newsletter signup could not be completed; please try the subscribe area separately.';
     } catch {
       status.textContent = 'We could not confirm your enquiry was received. Your message is still here. Please try again, or email steph@authentickids.co.uk.';
     } finally {
