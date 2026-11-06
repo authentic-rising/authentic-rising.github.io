@@ -18,15 +18,12 @@
     >
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../masterclass.css">
+    <script src="status.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">
       Skip to content
     </a>
-    <div class="review-banner">
-      Design preview · No payment has been checked and no confirmation email has been
-      sent by this page
-    </div>
     <header class="site-header">
       <a class="wordmark" href="../../" aria-label="Authentic Kids home">
         <img src="../../assets/mark.svg" alt="" width="40" height="48">
@@ -52,18 +49,15 @@
         </em>
       </h1>
       <p class="mc-lead">
-        Thank you for choosing to join Steph's masterclass.
+        Your masterclass booking and what happens next.
       </p>
-      <div class="mc-note">
-        <strong>
-          Booking status isn't available in this preview.
-        </strong>
-        <br>
-        Once payment is confirmed, your booking email will contain your class details
-        and Zoom joining instructions. Opening this page alone does not confirm a
-        booking.
+      <div class="mc-note" role="status" aria-live="polite" aria-atomic="true">
+        <strong id="booking-status-title">Check your booking confirmation.</strong>
+        <p id="booking-status-detail">Your confirmation email is the place to check your booking details. Opening this page alone does not confirm payment.</p>
+        <p id="booking-email-status"></p>
       </div>
-      <ol class="mc-steps">
+      <button class="button" id="booking-retry" type="button" hidden>Check again</button>
+      <noscript><p>Enable JavaScript to check your booking here, or check your confirmation email.</p></noscript>      <ol class="mc-steps">
         <li>
           <h3>
             Look out for your confirmation
@@ -78,7 +72,7 @@
             Join Steph on Zoom
           </h3>
           <p>
-            Keep your booking email handy for the date, time and private joining link.
+            The class is on 6 February 2027 at 6:30pm GMT. We will email your Zoom joining link closer to the event.
           </p>
         </li>
         <li>
@@ -87,8 +81,7 @@
           </h3>
           <p>
             Your live ticket includes access to the recording afterwards. You won't need
-            to purchase it separately. Delivery details will be confirmed before booking
-            opens.
+            to purchase it separately. We will email you access details after the event.
           </p>
         </li>
       </ol>
