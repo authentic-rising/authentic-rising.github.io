@@ -2,7 +2,7 @@
 const copy = {
   missing: ['Your booking reference is missing.', 'If you have paid, please check your confirmation email or contact Steph. Opening this page alone does not confirm a booking.'],
   checking: ['Checking your booking…', 'We’re waiting for payment confirmation. This can take a moment. Please don’t make another payment.'],
-  confirmed: ['Your booking is confirmed.', 'Your payment has been verified and your place is registered. Access to the recording is included.'],
+  confirmed: ['Your place is confirmed!', 'Your payment has been verified and your place is registered. Access to the recording is included.'],
   waiting: ['We can’t confirm your booking just yet.', 'Payment confirmation may still be on its way. If you have paid, please don’t pay again. Check your email, try again shortly, or contact Steph.'],
   unavailable: ['We couldn’t check your booking.', 'Please try again shortly. If you have paid, please don’t pay again. You can also check your confirmation email or contact Steph.']
 };
@@ -23,6 +23,8 @@ if (params.has('session_id')) {
   history.replaceState(null, '', location.pathname + (params.size ? '?' + params : '') + location.hash);
 }
 function render(state, mailState) {
+  document.querySelector('#welcome-title').textContent = state === 'confirmed' ? "You're In! Welcome to The Plum Bunch! 💜" : 'Welcome to The Plum Bunch! 💜';
+  document.querySelector('#confirmed-thanks').hidden = state !== 'confirmed';
   title.textContent = copy[state][0];
   detail.textContent = copy[state][1];
   email.textContent = emailCopy[mailState] || '';
