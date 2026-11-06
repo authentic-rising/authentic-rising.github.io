@@ -1208,3 +1208,11 @@ em {
 .enquiry-form .newsletter-consent input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin-top: .35rem; padding: 0; }
 .newsletter-optional[hidden] { display: none !important; }
 .newsletter-section details { margin-top: 1.5rem; }
+
+/* Shared vector logo in page branding. */
+.wordmark .header-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
