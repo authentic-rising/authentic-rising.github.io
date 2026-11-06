@@ -1,3 +1,66 @@
 .review-banner{padding:12px 24px;background:#e8dfe9;text-align:center;font-size:13px;line-height:1.6;border-bottom:1px solid var(--line)}
 .mc-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center;padding-top:80px;padding-bottom:80px}.mc-hero h1{font-size:clamp(46px,5.4vw,76px)}.mc-hero h1 em{color:#715678}.mc-lead{font-size:20px;max-width:37em}.mc-art{position:relative}.mc-art img{width:100%;max-height:530px;object-fit:contain}.mc-art figcaption{text-align:center;font-size:14px;font-style:italic}.mc-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:28px 0;font-size:14px}.mc-meta span{border-bottom:1px solid var(--line);padding-bottom:8px}.mc-section{padding:80px 0;border-top:1px solid var(--line)}.mc-columns{display:grid;grid-template-columns:1fr 1.2fr;gap:80px}.mc-section h2{font-size:clamp(34px,4vw,52px)}.mc-section h3{font-size:26px}.mc-topics{list-style:none;padding:0;margin:0;counter-reset:topics}.mc-topics li{padding:22px 0;border-bottom:1px solid var(--line);counter-increment:topics}.mc-topics li:first-child{padding-top:0}.mc-topics h3:before{content:'0' counter(topics) ' / ';font:14px var(--body);color:#715678}.mc-topics p{margin:0}.mc-band{background:#e5e9e1}.mc-portrait{width:100%;max-width:390px;aspect-ratio:4/5;object-fit:cover;border-radius:48% 48% 2px 2px}.mc-booking{background:#eee7ef;padding:40px;border:1px solid var(--line)}.mc-booking dl{margin:24px 0}.mc-booking dl div{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}.mc-booking dd{margin:0;text-align:right}.mc-booking dt{font-weight:600}.mc-booking .button{width:100%;justify-content:center;border:0;font-family:var(--body);font-size:16px}.mc-booking .button:disabled{background:#65576a;color:white;cursor:not-allowed}.mc-small{font-size:14px}.mc-faq details{border-bottom:1px solid var(--line);padding:20px 0}.mc-faq summary{cursor:pointer;font-size:19px}.mc-faq details p{margin:18px 0 0}.mc-footer{padding:35px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;font-size:14px}.mc-thanks{max-width:800px;padding-top:80px;padding-bottom:80px}.mc-thanks h1{font-size:clamp(44px,6vw,68px)}.mc-steps{padding-left:24px}.mc-steps li{padding:14px 0 14px 12px}.mc-note{border-left:3px solid var(--sage);padding:12px 24px;margin:28px 0}.mc-review-link{display:inline-block;margin-top:18px;font-size:13px}
 @media(max-width:800px){.mc-hero,.mc-columns{grid-template-columns:1fr;gap:35px}.mc-hero{padding-top:45px;padding-bottom:45px}.mc-art img{max-height:330px}.mc-section{padding:50px 0}.mc-booking{padding:25px}.mc-portrait{max-width:300px}.mc-thanks{padding-top:45px;padding-bottom:45px}.mc-meta{gap:12px}.mc-booking dl div{flex-direction:column;gap:0}.mc-booking dd{text-align:left}}
+.hero{padding:70px 0}.hero-grid,.about{display:grid;grid-template-columns:1.2fr 1fr;gap:65px;align-items:center}.hero-image img,.about img{max-height:480px;object-fit:cover;border-radius:48% 48% 2px 2px}.blush{color:#715678}.tagline,.lead{font-size:21px}.narrow{width:min(760px,calc(100% - 48px));margin:auto}.center{text-align:center}section.narrow,main>section.wrap,.about{padding-top:80px;padding-bottom:80px}.dark{background:#463c49;color:var(--cream);padding:70px 0}.questions,.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:25px 0;list-style:none}.topics{grid-template-columns:repeat(4,1fr)}.card,.questions li{border-top:1px solid var(--line);padding-top:25px}.card h3{font-size:27px}.emoji{display:none}.big{font-size:42px}.quote,.callout-leaf{font:italic 28px/1.5 var(--serif);text-align:center;margin:40px auto}.soft-bg{background:#e5e9e1}.why{border-top:1px solid var(--line);padding-top:25px}.btn{display:inline-block;background:#715678;color:white;padding:14px 25px;text-decoration:none}@media(max-width:800px){.hero-grid,.about,.questions,.topics{grid-template-columns:1fr;gap:30px}.hero-image img{max-height:330px}section.narrow,main>section.wrap,.about{padding-top:50px;padding-bottom:50px}}
+
+/* Keep the complete opening composition centred within the page. */
+main > .hero {
+  display: block;
+}
+.hero-grid {
+  margin-inline: auto;
+  text-align: left;
+}
+.hero-image {
+  justify-self: center;
+}
+/* Rounded topic cards echo the masterclass reference. */
+#explore .topics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+#explore .card {
+  background: #eee7ef;
+  border: 1px solid rgba(138, 111, 145, .3);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: left;
+}
+#explore .emoji {
+  display: block;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+#explore .card h3 { margin-bottom: 12px; }
+#explore .card p { margin-bottom: 0; }
+@media (max-width: 600px) {
+  #explore .topics { grid-template-columns: 1fr; }
+  #explore .card { padding: 26px; }
+}
+/* A sage reflection card beneath the plum topic cards. */
+#explore .quote {
+  background: #e5e9e1;
+  color: var(--ink);
+  border: 1px solid rgba(122, 139, 123, .3);
+  border-radius: 24px;
+  padding: 32px 40px;
+}
+@media (max-width: 600px) {
+  #explore .quote { padding: 26px; }
+}
+/* Quiet question cards within the plum reflection section. */
+.dark .questions li {
+  background: rgba(247, 244, 239, .07);
+  border: 1px solid rgba(247, 244, 239, .14);
+  border-radius: 24px;
+  padding: 28px;
+  color: var(--cream);
+}
+.dark .callout-leaf {
+  color: #cbd8c8;
+  max-width: 850px;
+}
+@media (max-width: 600px) {
+  .dark .questions li { padding: 24px; }
+}
