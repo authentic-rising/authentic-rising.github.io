@@ -1216,3 +1216,27 @@ em {
   object-fit: contain;
   flex-shrink: 0;
 }
+
+/* Approach cards share the masterclass topic-card treatment. */
+#approach .pillars {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+#approach .pillars article {
+  background: #eee7ef;
+  border: 1px solid rgba(138, 111, 145, .3);
+  border-radius: 24px;
+  padding: 32px;
+}
+#approach .pillar-label {
+  min-height: 0;
+  font-size: 14px;
+}
+#approach .pillars article > p:last-child {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  #approach .pillars { grid-template-columns: 1fr; }
+  #approach .pillars article { padding: 26px; }
+}
