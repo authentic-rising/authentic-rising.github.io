@@ -171,7 +171,35 @@ em {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 50px;
-  padding-top: 64px
+  padding: 64px max(56px, calc((100% - 1240px) / 2));
+  color: var(--cream);
+  background-color: var(--ink);
+  background-image: linear-gradient(90deg, #2b2728 0%, rgba(43,39,40,.96) 30%, rgba(43,39,40,.8) 48%, rgba(43,39,40,.15) 75%, transparent 100%), url('assets/authentic-kids-brush.jpg');
+  background-size: cover;
+  background-position: center right;
+}
+
+.hero em {
+  color: #ddc7e2;
+}
+
+.hero .button {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+.hero .button:hover {
+  background: #ddc7e2;
+  border-color: #ddc7e2;
+}
+
+.hero .text-link {
+  border-color: #ddc7e2;
+}
+
+.hero a:focus-visible {
+  outline-color: var(--cream);
 }
 
 .hero-copy {
@@ -797,7 +825,8 @@ em {
   }
 
   .hero {
-    gap: 25px
+    gap: 25px;
+    padding-inline: 32px
   }
 
   .hero h1 {
@@ -893,7 +922,8 @@ em {
   .hero {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding-top: 24px
+    padding: 48px 20px;
+    background-image: linear-gradient(90deg, rgba(43,39,40,.96), rgba(43,39,40,.84) 65%, rgba(43,39,40,.65)), url('assets/authentic-kids-brush.jpg');
   }
 
   .hero-copy {
