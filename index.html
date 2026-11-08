@@ -429,17 +429,16 @@
         </div>
         <div class="contact-notice">
           <span aria-hidden="true">↗</span>
-          <h3>
-            Let's Have a Chat
-          </h3>
-          <p>
-            Choose a time that works for you, and we'll start with a conversation.
-          </p>
-          <p>
-
-          </p>
-          <a class="button" href="https://calendar.app.google/ogfMT9sHYbNbyrfA8">Book a discovery call ↗</a>
-          <p><a href="newsletter/subscribe/?source=booking">You can also subscribe to Steph's letters</a>, separately from your booking.</p>
+          <section class="contact-option" aria-labelledby="subscribe-letters-title">
+            <h3 id="subscribe-letters-title">Subscribe to letters</h3>
+            <p>Thoughts from Steph on children's wellbeing, self-trust and connection, delivered by email.</p>
+            <a class="button" href="newsletter/subscribe/?source=booking">Subscribe to letters ↗</a>
+          </section>
+          <section class="contact-option" aria-labelledby="discovery-call-title">
+            <h3 id="discovery-call-title">Book a discovery call</h3>
+            <p>Choose a time that works for you, and we'll start with a conversation.</p>
+            <a class="button" href="https://calendar.app.google/ogfMT9sHYbNbyrfA8">Book a discovery call ↗</a>
+          </section>
           <form class="enquiry-form" id="enquiry-form">
             <h3>Send an enquiry</h3>
             <p id="enquiry-guidance">Please keep your message brief and avoid sensitive or medical details about children. Your enquiry will be emailed to Steph. Newsletter signup is optional and separate.</p>
@@ -464,20 +463,6 @@
           </form>
         </div>
 
-      <section class="section wrap newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
-        <h2 id="newsletter-title">Letters from Steph</h2>
-        <p>Thoughts on children's wellbeing, self-trust and connection, delivered by email.</p>
-        <form class="enquiry-form newsletter-signup" data-source="website">
-          <label for="newsletter-name">Your name (optional)</label><input id="newsletter-name" name="name" autocomplete="given-name" maxlength="100">
-          <label for="newsletter-email">Email address</label><input id="newsletter-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-          <label class="newsletter-consent"><input type="checkbox" name="consent" required disabled> <span data-newsletter-consent>Newsletter signup is being prepared.</span></label>
-          <p><a href="#newsletter-privacy">How we use your information</a></p>
-          <button class="button" type="submit" disabled>Subscribe ↗</button>
-          <p role="status" aria-live="polite">Checking newsletter signup availability…</p>
-          <noscript><p>Please enable JavaScript to subscribe.</p></noscript>
-        </form>
-        <details id="newsletter-privacy"><summary>How we use your information</summary><p>We use your email address and name to send the Authentic Kids letters you request. You must confirm your email before receiving them, and you can unsubscribe using any letter. Please do not include information about children. A minimal do-not-contact record may be retained after a profile is removed. For questions, email steph@authentickids.co.uk.</p></details>
-      </section>
     </main>
     <footer class="site-footer">
       <div class="wrap footer-grid">

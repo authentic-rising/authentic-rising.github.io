@@ -6,12 +6,13 @@
   <script src="../signup.js" defer></script>
 </head><body><main>
   <a class="wordmark" href="../../"><img class="header-logo" src="../../assets/logo.svg" alt="" width="88" height="88"><span>Authentic Kids</span></a><h1>Letters from Steph</h1>
-  <p>Thoughts on children's wellbeing, self-trust and connection. Signing up is separate from booking or making an enquiry.</p>
+  <p>Thoughts on children's wellbeing, self-trust and connection.</p>
   <form class="enquiry-form newsletter-signup" data-source="website">
-    <label for="name">Your name (optional)</label><input id="name" name="name" maxlength="100" autocomplete="given-name">
+    <label for="name">Your name</label><input id="name" name="name" maxlength="100" autocomplete="given-name" required>
     <label for="email">Email address</label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" required>
-    <label class="newsletter-consent"><input type="checkbox" name="consent" required disabled><span data-newsletter-consent>Newsletter signup is being prepared.</span></label>
-    <p>Confirm your email before receiving letters. Unsubscribe using any letter. Please do not include information about children. Your email and optional name are used for these letters; a minimal do-not-contact record may remain after profile removal. Questions: steph@authentickids.co.uk.</p>
+    <label class="newsletter-consent"><input type="checkbox" name="consent" required disabled><span data-newsletter-consent>Loading email consent…</span></label>
+    <p>We'll email you a link to confirm your subscription.</p>
+    <p class="signup-privacy-note">You can unsubscribe using any letter. Your name and email are used for these letters; a minimal do-not-contact record may remain after profile removal.</p>
     <button type="submit" disabled>Subscribe</button><p role="status" aria-live="polite">Checking signup availability…</p>
     <noscript><p>Please enable JavaScript to subscribe.</p></noscript>
   </form>

@@ -6,3 +6,4 @@ button { background: #2b2728; color: #f7f4ef; border: 0; border-radius: 2rem;
 button:disabled { opacity: .55; cursor: default; }
 [role="status"] { margin-top: 1.5rem; }
 .wordmark { display: inline-flex; }
+.signup-privacy-note { font-size: .85em; line-height: 1.6; }

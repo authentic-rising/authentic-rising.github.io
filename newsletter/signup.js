@@ -21,13 +21,19 @@
         form.addEventListener('submit', async event => {
           event.preventDefault();
           if (button.disabled || !form.reportValidity()) return;
+          const name = form.querySelector('[name="name"]');
+          if (name?.required && !name.value.trim()) {
+            status.textContent = 'Please enter your name.';
+            name.focus();
+            return;
+          }
           button.disabled = true; status.textContent = 'Requesting your confirmation email…';
           try {
             const values = Object.fromEntries(new FormData(form));
             const source = new URLSearchParams(location.search).get('source') === 'booking' ? 'booking' : form.dataset.source || 'website';
             const sent = await fetch('https://api.authentickids.co.uk/newsletter/subscriptions', {
               method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'omit',
-              body: JSON.stringify({ email: values.email, name: values.name || null, consent: true, consentVersion: options.consentVersion, source }),
+              body: JSON.stringify({ email: values.email.trim(), name: values.name?.trim() || null, consent: true, consentVersion: options.consentVersion, source }),
               signal: AbortSignal.timeout(20000)
             });
             if (!sent.ok) throw new Error('Signup failed');
@@ -37,7 +43,10 @@
         });
       });
     } catch {
-      forms.forEach(form => { form.querySelector('[role="status"]').textContent = 'Newsletter signup is not available yet. Please try again later.'; });
+      forms.forEach(form => {
+        form.querySelector('[data-newsletter-consent]').textContent = 'Email consent could not be loaded.';
+        form.querySelector('[role="status"]').textContent = 'We couldn’t connect to signup. Please refresh the page to try again.';
+      });
     }
   }
   initialize();

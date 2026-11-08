@@ -1237,6 +1237,8 @@ em {
 
 }
 
+.contact-option { text-align: left; }
+.contact-option + .contact-option { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #8A6F91; }
 .enquiry-form { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #8A6F91; text-align: left; }
 .enquiry-form label { display: block; margin: 1.1rem 0 .4rem; }
 .enquiry-form input, .enquiry-form select, .enquiry-form textarea { display: block; box-sizing: border-box; width: 100%; max-width: 100%; padding: .8rem; border: 1px solid #7A8B7B; border-radius: .25rem; background: #F7F4EF; color: #2B2728; font: inherit; }
